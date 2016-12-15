@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <!--头部-->
+    <LinearLayout
+        android:id="@+id/layout_show"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layout_previoushead"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dp"
+                android:layout_toRightOf="@id/tv_name"
+                android:gravity="center_vertical"
+                android:textColor="@color/aa"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_altitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dp"
+                android:layout_toRightOf="@id/tv_price"
+                android:gravity="center_vertical"
+                android:textColor="@color/aa"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_timetitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dp"
+                android:layout_toRightOf="@id/tv_altitude"
+                android:gravity="center_vertical"
+                android:text="时间"
+                android:textColor="@color/black66"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/tv_timetitle"
+                android:gravity="center_vertical"
+                android:textColor="@color/black66"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <!--实时信息-->
+        <LinearLayout
+            android:id="@+id/layout_realtime"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:visibility="gone">
+
+            <com.csf.csflibrary.view.myatotextview.AutofitTextView
+                android:id="@+id/tv_realtime"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                autofit:minTextSize="8sp" />
+
+            <TextView
+                android:id="@+id/tv_realtimeprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="价格"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+            <com.csf.csflibrary.view.myatotextview.AutofitTextView
+                android:id="@+id/tv_realtimepricedata"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:lines="1"
+                android:textColor="@color/aa"
+                android:textSize="18sp"
+                autofit:minTextSize="8sp" />
+
+            <TextView
+                android:id="@+id/tv_realtimealtitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="涨幅"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <com.csf.csflibrary.view.myatotextview.AutofitTextView
+                android:id="@+id/tv_realtimealtitudedata"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:lines="1"
+                android:textColor="@color/aa"
+                android:textSize="18sp"
+                autofit:minTextSize="8sp" />
+
+            <TextView
+                android:id="@+id/tv_realtimechengjiao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="成交"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <com.csf.csflibrary.view.myatotextview.AutofitTextView
+                android:id="@+id/tv_realtimechengjiaocount"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:lines="1"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                autofit:minTextSize="8sp" />
+
+            <TextView
+                android:id="@+id/tv_realtimealverageprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="均价"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <com.csf.csflibrary.view.myatotextview.AutofitTextView
+                android:id="@+id/tv_realtimealveragepricedata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:lines="1"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                autofit:minTextSize="8sp" />
+        </LinearLayout>
+
+        <!--K线图头部-->
+        <LinearLayout
+            android:id="@+id/layout_realtimeKChar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_KChartime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="开"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+            <com.csf.csflibrary.view.myatotextview.AutofitTextView
+                android:id="@+id/tv_kcharpriceopen"
+                android:layout_width="66dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:lines="1"
+                android:textColor="@color/aa"
+                android:textSize="18sp"
+                autofit:minTextSize="8sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="高"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <com.csf.csflibrary.view.myatotextview.AutofitTextView
+                android:id="@+id/tv_Kcharheightvalue"
+                android:layout_width="66dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:lines="1"
+                android:textColor="@color/aa"
+                android:textSize="18sp"
+                autofit:minTextSize="8sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="低"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <com.csf.csflibrary.view.myatotextview.AutofitTextView
+                android:id="@+id/tv_KCharLowValue"
+                android:layout_width="66dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:lines="1"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                autofit:minTextSize="8sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="收"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <com.csf.csflibrary.view.myatotextview.AutofitTextView
+                android:id="@+id/tv_KCharValueClose"
+                android:layout_width="66dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:lines="1"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                autofit:minTextSize="8sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="涨幅"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <com.csf.csflibrary.view.myatotextview.AutofitTextView
+                android:id="@+id/tv_KCharValueAltitude"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:lines="1"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                autofit:minTextSize="8sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!--尾部-->
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <include
+            layout="@layout/chartitleincludelayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/thirtysevendp"></include>
+    </LinearLayout>
+
+    <!--图表-->
+    <RelativeLayout
+        android:id="@+id/layout_total"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layout_bottom"
+        android:layout_below="@id/layout_show">
+
+        <include
+            layout="@layout/charcustomincludelandscapelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></include>
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateDuration="1000"
+            android:visibility="gone"
+             />
+    </RelativeLayout>
+
+
+</RelativeLayout>

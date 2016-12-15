@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--横屏-->
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--个股图表-->
+    <LinearLayout
+        android:id="@+id/layout_chartotal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <!--分时图表-->
+        <LinearLayout
+            android:id="@+id/layout_shareTime"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <!--图表-->
+            <LinearLayout
+                android:layout_width="450dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.csf.csflibrary.view.RealTimeLineChart
+                    android:id="@+id/stocktimeshareLinechar"
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp" />
+
+                <com.csf.csflibrary.view.RealTimeBarChart
+                    android:id="@+id/stocktimeshareBarchar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <!--买卖档-->
+            <LinearLayout
+                android:id="@+id/layout_buyandsellgear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ListView
+                    android:id="@+id/lv_sale"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:listSelector="@android:color/transparent"></ListView>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/e4"></View>
+
+                <ListView
+                    android:id="@+id/lv_buy"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:listSelector="@android:color/transparent"></ListView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!--五日图表-->
+        <LinearLayout
+            android:id="@+id/layout_fivedays"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.csf.csflibrary.view.RealTimeLineChart
+                android:id="@+id/stocktimeshareFiveDaysLinechar"
+                android:layout_width="match_parent"
+                android:layout_height="210dp" />
+
+            <com.csf.csflibrary.view.RealTimeBarChart
+                android:id="@+id/stocktimeshareFiveDaysBarchar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <!--日K图表-->
+        <LinearLayout
+            android:id="@+id/layout_daysKchar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.csf.csflibrary.view.RealTimeCombineLineChart
+                android:id="@+id/stockCombineDayChar"
+                android:layout_width="match_parent"
+                android:layout_height="210dp" />
+
+            <com.csf.csflibrary.view.RealTimeBarChart
+                android:id="@+id/stockBarDayChar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <!--周K图表-->
+        <LinearLayout
+            android:id="@+id/layout_weekKchar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.csf.csflibrary.view.RealTimeCombineLineChart
+                android:id="@+id/stockCombineWeekChar"
+                android:layout_width="match_parent"
+                android:layout_height="210dp" />
+
+            <com.csf.csflibrary.view.RealTimeBarChart
+                android:id="@+id/stockBarWeekChar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <!--月K图表-->
+        <LinearLayout
+            android:id="@+id/layout_monthKchar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.csf.csflibrary.view.RealTimeCombineLineChart
+                android:id="@+id/stockCombineMonthChar"
+                android:layout_width="match_parent"
+                android:layout_height="210dp" />
+
+            <com.csf.csflibrary.view.RealTimeBarChart
+                android:id="@+id/stockBarMonthChar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</merge>
